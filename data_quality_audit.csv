@@ -1,0 +1,8 @@
+variable,n,missing_n,missing_percent,minimum,median,maximum
+TotalPopulation,77998,0,0.0,69.0,3801.0,37892.0
+DIABETES_CrudePrev,77998,0,0.0,0.8,11.9,50.8
+NO_AC_PE,77998,0,0.0,0.0,1.6,87.9
+OBESITY_CrudePrev,77998,0,0.0,11.6,34.1,64.3
+LPA_CrudePrev,77998,0,0.0,6.7,25.1,75.5
+ACCESS2_CrudePrev,77998,0,0.0,1.7,9.4,59.0
+DISABILITY_CrudePrev,77998,0,0.0,10.7,30.8,76.6
