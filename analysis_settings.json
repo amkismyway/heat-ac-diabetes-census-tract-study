@@ -1,0 +1,12 @@
+{
+  "study_design": "National census-tract ecological study",
+  "primary_geography": "Contiguous United States and District of Columbia",
+  "health_source": "CDC PLACES 2025 release",
+  "cooling_source": "2023 Census Local Air Conditioning Estimates",
+  "socioeconomic_source": "2023 ACS 5-year estimates",
+  "heat_source": "Daymet V4",
+  "heat_period": "2019-2023",
+  "primary_heat_metric": "Mean annual days with Tmax >= 90F",
+  "principal_model": "OLS with HC3 robust SE and state fixed effects",
+  "interpretation": "Ecological association; no individual causal inference"
+}
