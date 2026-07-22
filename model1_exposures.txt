@@ -1,0 +1,27 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:     DIABETES_CrudePrev   R-squared:                       0.038
+Model:                            OLS   Adj. R-squared:                  0.038
+Method:                 Least Squares   F-statistic:                     916.2
+Date:                Wed, 22 Jul 2026   Prob (F-statistic):               0.00
+Time:                        15:11:56   Log-Likelihood:            -2.1508e+05
+No. Observations:               77125   AIC:                         4.302e+05
+Df Residuals:                   77121   BIC:                         4.302e+05
+Df Model:                           3                                         
+Covariance Type:                  HC3                                         
+=========================================================================================
+                            coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                12.8789      0.023    560.762      0.000      12.834      12.924
+NO_AC_PE_centered         0.0704      0.003     21.661      0.000       0.064       0.077
+hot_days_90f_centered     0.0274      0.001     44.474      0.000       0.026       0.029
+heat90_ac_interaction     0.0020   8.38e-05     23.810      0.000       0.002       0.002
+==============================================================================
+Omnibus:                    11627.823   Durbin-Watson:                   0.660
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            24824.616
+Skew:                           0.906   Prob(JB):                         0.00
+Kurtosis:                       5.107   Cond. No.                         808.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
