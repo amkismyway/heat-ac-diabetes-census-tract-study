@@ -1,0 +1,3 @@
+comparison,spearman_rho,p_value
+Diabetes vs no AC,0.055678606269078494,5.159223667447862e-54
+Diabetes vs hot days,0.18197455517576774,0.0
