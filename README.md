@@ -1,1 +1,0 @@
-# heat-ac-diabetes-census-tract-study
