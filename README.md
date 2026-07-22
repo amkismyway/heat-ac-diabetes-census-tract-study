@@ -1,68 +1,40 @@
-# Extreme Heat, Residential Air Conditioning, and Diabetes Prevalence
+# Data access and reconstruction
 
-This repository contains the reproducible analysis materials for a national census-tract ecological study examining whether residential air-conditioning access modifies the association between extreme heat exposure and diagnosed diabetes prevalence in the contiguous United States and the District of Columbia.
+The large source and tract-level analytic files are not committed to this GitHub repository. They can be reconstructed by running the notebooks in order.
 
-## Study overview
+## Source datasets
 
-- **Design:** National census-tract ecological analysis
-- **Health outcome:** Diagnosed diabetes prevalence from the CDC PLACES 2025 release
-- **Cooling exposure:** Percentage of occupied housing units without air conditioning from the 2023 Census Local Air Conditioning Estimates
-- **Heat exposure:** Mean annual days with maximum temperature at or above 90°F, calculated from Daymet V4 for 2019–2023
-- **Covariates:** 2023 American Community Survey 5-year tract estimates
-- **Primary model:** Ordinary least squares regression with HC3 robust standard errors and state fixed effects
-- **Primary sample:** 77,125 census tracts
+1. **CDC PLACES 2025 release**  
+   Census-tract estimates of diagnosed diabetes prevalence and relevant geographic fields.
 
-The analysis is ecological. Results describe tract-level associations and should not be interpreted as individual-level causal effects.
+2. **2023 Census Local Air Conditioning Estimates**  
+   Tract-level estimates of occupied housing units without air conditioning, incorporated into the cleaned PLACES–LACE input file used by this project.
 
-## Repository structure
+3. **2023 American Community Survey 5-year estimates**  
+   Population, poverty, median household income, renter occupancy, no-vehicle access, and age 65 years or older.
+
+4. **Daymet V4**  
+   Daily maximum temperature for 2019–2023, processed through Google Earth Engine to calculate mean annual tract-level days at or above 90°F and 95°F.
+
+## Files generated locally
+
+Running the notebooks creates files such as:
 
 ```text
-notebooks/   Data cleaning and complete national analysis notebooks
-figures/     Publication figures
-models/      Plain-text regression summaries
-metadata/    Analysis settings and provenance
-tables/      CSV and Excel result tables
-data/        Data-access and reconstruction instructions
+data_raw/national_places_lace_clean.csv
+data_raw/acs_2023_raw.csv
+data_raw/tract_heat_daymet_2019_2023.csv
+data_clean/acs_2023_clean.csv
+data_clean/national_analysis_merged.csv
+data_clean/national_analysis_ready.csv
 ```
 
-## Reproducing the analysis
+These files are excluded through `.gitignore` because they are large and/or derived from external sources. A versioned archive can be deposited in Zenodo or another research repository, subject to the source datasets' redistribution terms.
 
-The notebooks are designed for Google Colab and should be run in order:
+## Census API key
 
-1. `notebooks/01_create_national_places_lace_clean.ipynb`
-   - Upload the raw CDC PLACES census-tract file.
-   - Identify and standardize tract identifiers, state/county fields, population, diabetes prevalence, and lack-of-air-conditioning estimates.
-   - Export `national_places_lace_clean.csv`.
+A Census API key is optional in the provided notebook. Press Enter at the prompt to use unauthenticated requests. A key is helpful for reliability when making many requests.
 
-2. `notebooks/02_diabetes_heat_ac_national_analysis.ipynb`
-   - Upload the cleaned PLACES–LACE file.
-   - Download ACS covariates. A Census API key is optional; unauthenticated requests may be slower or rate-limited.
-   - Create tract-level heat exposure using Google Earth Engine and Daymet V4.
-   - Fit national, state-fixed-effects, Tennessee, Shelby County, and sensitivity models.
-   - Export all figures, tables, model summaries, and the final project package.
+## Privacy
 
-## Data availability
-
-Large raw and tract-level analytic datasets are intentionally excluded from GitHub. See [`data/README.md`](data/README.md) for source information and reconstruction steps. The small, publication-ready result tables are included.
-
-## Key outputs
-
-- `tables/national_regression_results.csv`
-- `tables/sensitivity_analysis_results.csv`
-- `tables/table1_descriptive_statistics.csv`
-- `figures/figure1_no_ac_diabetes.png`
-- `figures/figure2_heat_diabetes.png`
-- `figures/figure3_heat_ac_interaction.png`
-- `models/model4_state_fixed_effects.txt`
-
-## Software
-
-Core dependencies are listed in `requirements.txt`. Google Colab already includes several of them. Earth Engine use requires a Google account with Earth Engine access and interactive authentication.
-
-## Citation
-
-Citation metadata are available in `CITATION.cff`. Please cite the associated manuscript and archived release when a DOI becomes available.
-
-## License
-
-Code is released under the MIT License. Source datasets remain subject to the terms of their respective providers.
+All data are aggregate census-tract estimates. No individual-level or protected health information is included.
