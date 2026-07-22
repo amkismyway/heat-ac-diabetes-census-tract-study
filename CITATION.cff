@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript and software release."
+title: "Extreme Heat, Residential Air Conditioning, and Diabetes Prevalence"
+type: software
+authors:
+  - family-names: Khawaja
+    given-names: Abdullah
+version: 1.0.0
+date-released: 2026-07-22
+repository-code: "https://github.com/USERNAME/heat-ac-diabetes-census-tract-study"
+license: MIT
+keywords:
+  - diabetes
+  - extreme heat
+  - air conditioning
+  - environmental health
+  - census tract
+  - CDC PLACES
+  - Daymet
