@@ -62,7 +62,9 @@ Core dependencies are listed in `requirements.txt`. Google Colab already include
 
 ## Citation
 
-Citation metadata are available in `CITATION.cff`. 
+Citation metadata are available in `CITATION.cff`.
+
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21496880.svg)](https://doi.org/10.5281/zenodo.21496880)
 
 ## License
