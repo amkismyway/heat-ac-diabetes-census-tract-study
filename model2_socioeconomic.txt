@@ -1,0 +1,33 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:     DIABETES_CrudePrev   R-squared:                       0.495
+Model:                            OLS   Adj. R-squared:                  0.495
+Method:                 Least Squares   F-statistic:                     4915.
+Date:                Wed, 22 Jul 2026   Prob (F-statistic):               0.00
+Time:                        15:11:56   Log-Likelihood:            -1.9021e+05
+No. Observations:               77125   AIC:                         3.804e+05
+Df Residuals:                   77117   BIC:                         3.805e+05
+Df Model:                           7                                         
+Covariance Type:                  HC3                                         
+=========================================================================================
+                            coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                 8.0316      0.041    193.933      0.000       7.950       8.113
+NO_AC_PE_centered         0.0149      0.003      5.868      0.000       0.010       0.020
+hot_days_90f_centered     0.0147      0.000     29.629      0.000       0.014       0.016
+heat90_ac_interaction     0.0007   6.34e-05     11.239      0.000       0.001       0.001
+poverty_percent           0.2624      0.003    103.339      0.000       0.257       0.267
+age65_percent             0.1241      0.001     90.952      0.000       0.121       0.127
+renter_percent           -0.0379      0.001    -54.014      0.000      -0.039      -0.037
+no_vehicle_percent        0.0229      0.002     12.412      0.000       0.019       0.027
+==============================================================================
+Omnibus:                    15539.754   Durbin-Watson:                   0.862
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           175655.581
+Skew:                          -0.645   Prob(JB):                         0.00
+Kurtosis:                      10.280   Cond. No.                     1.93e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 1.93e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
