@@ -21,7 +21,6 @@ notebooks/   Data cleaning and complete national analysis notebooks
 figures/     Publication figures
 models/      Plain-text regression summaries
 metadata/    Analysis settings and provenance
-manuscript/  Editable manuscript draft
 tables/      CSV and Excel result tables
 data/        Data-access and reconstruction instructions
 ```
